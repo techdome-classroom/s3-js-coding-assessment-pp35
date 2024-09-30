@@ -16,20 +16,20 @@ var isValid = function(s) {
     for (let char of s) {
         if (brackets[char]) {
             
-            const bracket = stack.length > 0 ? stack.pop() : '#';  
+            const bracket = stack.length > 0 ? stack.pop() : '#'  
             if (brackets[char] !== bracket) {
-                return false;  
+                return false 
             }
         } else {
             
-            stack.push(char);
+            stack.push(char)
         }
     }
     
     
-    return stack.length === 0;
+    return stack.length === 0
 };
 
-module.exports = { isValid };
+module.exports = { isValid }
 //console.log(isValid("()")); 
 
